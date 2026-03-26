@@ -8,7 +8,7 @@ permalink: /about/
 
 Senior Software Engineer @ [WeRide.ai](https://www.weride.ai)，目前在广州。
 
-近十年软件工程经验，专注于可扩展的云原生应用与 AI 相关服务。曾在 AWS、网易游戏、InsightFinder 工作过。
+近十年软件工程经验，目前专注于自动驾驶仿真，infra相关领域。曾在 AWS、网易游戏、InsightFinder 工作。
 
 ## 教育背景
 
