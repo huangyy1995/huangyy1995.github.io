@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="post-body">
+  <header class="post-header">
+    <h1>{{ page.title | escape }}</h1>
+    <div class="post-meta-row">
+      <time>{{ page.date | date: "%Y年%m月%d日" }}</time>
+      {% for cat in page.categories %}
+        <a href="{{ '/categories' | relative_url }}#{{ cat | slugify }}" class="cat-badge">{{ cat }}</a>
+      {% endfor %}
+      {% for tag in page.tags %}
+        <span class="tag-badge"># {{ tag }}</span>
+      {% endfor %}
+    </div>
+  </header>
+  <div class="post-content">
+    {{ content }}
+  </div>
+</div>

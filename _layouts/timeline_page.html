@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="page-title">🕐 {{ page.title }}</div>
+<p class="page-subtitle">共 {{ site.posts.size }} 篇文章</p>
+
+<div class="timeline-container">
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for year_group in posts_by_year %}
+  <div class="timeline-year-group">
+    <h2 class="timeline-year-label">{{ year_group.name }}</h2>
+    <div class="timeline-items">
+      {% for post in year_group.items %}
+      <div class="timeline-item">
+        <span class="timeline-date">{{ post.date | date: "%m-%d" }}</span>
+        <a href="{{ post.url | relative_url }}" class="timeline-title">{{ post.title | escape }}</a>
+        <div class="timeline-cats">
+          {% for cat in post.categories %}
+            <span class="timeline-cat">{{ cat }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}
+</div>

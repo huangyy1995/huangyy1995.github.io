@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="page-title">📂 {{ page.title }}</div>
+<p class="page-subtitle">共 {{ site.categories.size }} 个分类，{{ site.posts.size }} 篇文章</p>
+
+<div class="categories-grid">
+{% assign sorted_cats = site.categories | sort %}
+{% for cat in sorted_cats %}
+  <section class="category-section" id="{{ cat[0] | slugify }}">
+    <div class="category-header">
+      <span class="category-name">{{ cat[0] }}</span>
+      <span class="category-count">{{ cat[1].size }} 篇</span>
+    </div>
+    <ul class="category-posts">
+      {% for post in cat[1] %}
+      <li>
+        <span class="post-item-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endfor %}
+</div>

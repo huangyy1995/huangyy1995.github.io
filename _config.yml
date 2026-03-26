@@ -19,9 +19,10 @@
 # in the templates via {{ site.myvariable }}.
 
 title: "Xingyao Huang's Blog"
+author: Xingyao Huang
 email: huangyy1995@gmail.com
 description: >-
-  Personal blog of Xingyao Huang
+  Xingyao Huang 的个人博客，记录编程、阅读与生活
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://huangyy1995.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  huangyy1995
